@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form html with JS</title>
+</head>
+<body>
+    <h1>Form with JS</h1>
+    <style>
+        form {
+            width: 350px;
+            height: 350px;
+            border: 1px solid black;
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 0.5rem;
+        }
+
+        .input {
+            height: 50px;
+            margin-bottom: 1rem;
+        }
+
+        .comentarios{
+            height: 100px;
+            margin-bottom: 1rem;
+        }
+
+        .label{
+            height: 50px;
+            margin-bottom: 1rem;
+        }
+
+        .submit {
+            height: 50px;
+            background: blue;
+            color: white;
+            border-radius: 0.5rem;
+        }
+
+        .input.error {
+            border: 2px solid red;
+        }
+
+        .input:focus {
+            outline: none;
+        }
+
+    </style>
+
+    <form onsubmit onsubmit={myForm(event)}>
+        <input class="input" id="nombre" placeholder="Escribe tu nombre" type="text">
+        <input class="input" id="apellido" placeholder="Escribe tu apellido" type="text">
+        <input class="input" id="edad" placeholder="Escribe tu edad" type="number">
+        <textarea class="comentarios" name="comentarios" id="comentarios" placeholder="Comentarios" cols="30" rows="10"></textarea>
+        <input class="input" id="email" placeholder="Escribe tu email" type="email">
+        <label class="label"><input type="checkbox" id="terminos"> Acepta terminos y condiciones</label>
+        <input class="submit" type="submit" value="Enviar">
+    </form>
+
+    <div id="formValues"></div>
+<script src="./main.js"></script>
+</body>
+</html>
